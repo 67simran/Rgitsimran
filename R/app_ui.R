@@ -1,22 +1,36 @@
-#' The application User-Interface
+# The application User-Interface
 #'
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
-#' @import shiny
+#' @import shiny plotly reshape2 readr
 #' @noRd
 app_ui <- function(request) {
+ 
   tagList(
+   
+     
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      h1("Rshiny")
-    )
+   
   )
+
+      mod_time_series_module_ui("time_series_module_1")
+      
+   
+        
+        
+    
+  
+    
+  
 }
 
 #' Add external Resources to the Application
 #'
+
+
+
 #' This function is internally used to add external
 #' resources inside the Shiny application.
 #'
@@ -28,12 +42,12 @@ golem_add_external_resources <- function() {
     "www",
     app_sys("app/www")
   )
-
+  
   tags$head(
     favicon(),
     bundle_resources(
       path = app_sys("app/www"),
-      app_title = "Rshiny"
+      app_title = "Average annual temperature of India(1901-2020)"
     )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()
