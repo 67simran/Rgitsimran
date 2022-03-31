@@ -17,18 +17,16 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/67simran/Rgitsimran/workflows/R-CMD-check/badge.svg)](https://github.com/67simran/Rgitsimran/actions)
 <!-- badges: end -->
 
 The goal of Rshiny is to ...
 
 ## Installation
 
-You can install the development version of Rshiny from [GitHub](https://github.com/) with:
+You can install the development version of Rshiny like so:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("67simran/Rgitsimran")
+# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
 ```
 
 ## Example
