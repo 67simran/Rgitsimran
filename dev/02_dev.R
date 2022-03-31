@@ -14,6 +14,11 @@
 # Engineering
 
 ## Dependencies ----
+usethis::use_package("plotly")
+usethis::use_package("shiny")
+usethis::use_package("dplyr")
+usethis::use_package("readr")
+usethis::use_package(reshape(2))
 ## Amend DESCRIPTION with dependencies read from package code parsing
 attachment::att_amend_desc()
 
@@ -29,10 +34,10 @@ golem::add_utils("helpers", with_test = TRUE)
 
 ## External resources
 ## Creates .js and .css files at inst/app/www
-golem::add_js_file("script")
-golem::add_js_handler("handlers")
-golem::add_css_file("custom")
-golem::add_sass_file("custom")
+golem::add_js_file("www/script")
+golem::add_js_handler("www/handlers")
+golem::add_css_file("www/custom")
+golem::add_sass_file("www/custom")
 
 ## Add internal datasets ----
 ## If you have data in your package
@@ -93,3 +98,4 @@ usethis::use_gitlab_ci()
 # You're now set! ----
 # go to dev/03_deploy.R
 rstudioapi::navigateToFile("dev/03_deploy.R")
+ 
