@@ -17,7 +17,7 @@ app_server <- function(input, output, session) {
   })
   time_series <- read_csv("timeseries.csv")
   output$values <- renderTable({
-    sliderValues("time_series$India")
+    sliderValues()
     
     
     

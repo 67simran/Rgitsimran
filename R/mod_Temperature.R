@@ -18,7 +18,7 @@ mod_time_series_module_ui <- function(id, time_series){
     
       sidebarLayout(
         sidebarPanel(
-          "Create a simple package using the Golem R package that contains a Shiny application"
+          "Create a simple package using the Golem R package that contains a Shiny application."
           
         ),
         
@@ -122,19 +122,7 @@ mod_time_series_module_server <- function(id, time_series){
                 yaxis = list(title = "Temperature(C)"))
       
    
-      tagList(
-        fluidPage(
-          fluidRow(
-            sidebarLayout(
-              sidebarPanel(
-                numericInput("time_series$India", "Year:", value = 24, min = 22, max = 26)
-              ), 
-              mainPanel(
-                p(strong("RSQLiteAdmin Visualisation Tools ")),
-                p(code("Simran Chaudhary")),
-                a(href="https://climateknowledgeportal.worldbank.org/download-data", "link to Global Annual Temperatures"))
-            )
-          )), )
+     
     
       fig
     })
