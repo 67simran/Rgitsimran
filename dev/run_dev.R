@@ -1,3 +1,4 @@
+
 # Sass code compilation
 sass::sass(input = sass::sass_file("inst/app/www/custom.sass"), output = "inst/app/www/custom.css", cache = NULL)
 
@@ -16,3 +17,4 @@ golem::document_and_reload()
 
 # Run the application
 run_app()
+
