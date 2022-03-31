@@ -10,7 +10,8 @@
 mod_Year_ui <- function(id){
   ns <- NS(id)
   tagList(
- 
+ h2("A plot"),
+ plotOutput(ns("plot"))
   )
 }
     
@@ -20,9 +21,15 @@ mod_Year_ui <- function(id){
 mod_Year_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
- 
-  })
-}
+    output$plot <- renderPlot(
+     plot(iris),
+     
+     
+    )
+
+ })
+  }
+
     
 ## To be copied in the UI
 # mod_Year_ui("Year_1")
