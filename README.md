@@ -8,7 +8,7 @@ Test: Create a simple package using the Golem R package that contains a Shiny ap
 #Author: Simran
 #Name: RSQLiteAdmin Visualisation Tools
 
-Medium 1
+Medium 2
 
 Create a simple package using the Golem R package that contains a Shiny application to view the chart above.
 
