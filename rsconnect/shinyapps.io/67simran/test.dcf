@@ -1,0 +1,13 @@
+name: test
+title: test
+username:
+account: 67simran
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5987303
+bundleId: 5752097
+url: https://67simran.shinyapps.io/test/
+when: 1648776068.69117
+lastSyncTime: 1648776068.69117
+asMultiple: FALSE
+asStatic: FALSE

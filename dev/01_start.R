@@ -19,9 +19,9 @@
 ## to change the name in the app_sys() function in app_config.R /!\
 ##
 golem::fill_desc(
-  pkg_name = "Rshiny", # The Name of the package containing the App
-  pkg_title = "Annual average temperature of India (1901-2020)", # The Title of the package containing the App
-  pkg_description = "Shiny Application with golem to Analyze The Annual average temperature of India (1901-2020)", # The Description of the package containing the App
+  pkg_name = "Rgitsimran", # The Name of the package containing the App
+  pkg_title = "Average annual temperature of India (1901-2020)", # The Title of the package containing the App
+  pkg_description = "Shiny Application with golem to Analyze The average annual temperature of India (1901-2020)", # The Description of the package containing the App
   author_first_name = "Simran", # Your First Name
   author_last_name = "Chaudhary", # Your Last Name
   author_email = "simran.67c@gMAIL.COM", # Your Email
@@ -42,7 +42,7 @@ usethis::use_lifecycle_badge("Experimental")
 usethis::use_news_md(open = FALSE)
 
 ## Use git ----
-usethis::use_git(rshiny/rgitsimran)
+usethis::use_git()
 
 ## Init Testing Infrastructure ----
 ## Create a template for tests

@@ -3,15 +3,16 @@ RUN apt-get update && apt-get install -y  git-core libcurl4-openssl-dev libgit2-
 RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.method = 'libcurl', Ncpus = 4)" >> /usr/local/lib/R/etc/Rprofile.site
 RUN R -e 'install.packages("remotes")'
 RUN Rscript -e 'remotes::install_version("pkgload",upgrade="never", version = "1.2.4")'
-RUN Rscript -e 'remotes::install_version("knitr",upgrade="never", version = "1.37")'
+RUN Rscript -e 'remotes::install_version("knitr",upgrade="never", version = "1.38")'
 RUN Rscript -e 'remotes::install_version("shiny",upgrade="never", version = "1.7.1")'
 RUN Rscript -e 'remotes::install_version("rmarkdown",upgrade="never", version = "2.13")'
-RUN Rscript -e 'remotes::install_version("covr",upgrade="never", version = "3.5.1")'
+RUN Rscript -e 'remotes::install_version("reshape2",upgrade="never", version = "1.4.4")'
+RUN Rscript -e 'remotes::install_version("readr",upgrade="never", version = "2.1.2")'
+RUN Rscript -e 'remotes::install_version("plotly",upgrade="never", version = "4.10.0")'
 RUN Rscript -e 'remotes::install_version("golem",upgrade="never", version = "0.3.2")'
 RUN mkdir /build_zone
 ADD . /build_zone
 WORKDIR /build_zone
 RUN R -e 'remotes::install_local(upgrade="never")'
 RUN rm -rf /build_zone
-EXPOSE 3838
-CMD  ["R", "-e", "options('shiny.port'=3838,shiny.host='0.0.0.0');Rshiny::run_app()"]
+CMD R -e "options('shiny.port'=$PORT,shiny.host='0.0.0.0');Rgitsimran::run_app()"

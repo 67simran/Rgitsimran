@@ -4,4 +4,4 @@
 
 pkgload::load_all(export_all = FALSE,helpers = FALSE,attach_testthat = FALSE)
 options( "golem.app.prod" = TRUE)
-Rshiny::run_app('R') # add parameters here (if any)
+Rgitsimran::run_app() # add parameters here (if any)

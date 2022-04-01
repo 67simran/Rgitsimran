@@ -24,7 +24,6 @@ attachment::att_amend_desc()
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "Year", with_test = TRUE) # Name of the module
 golem::add_module(name = "Temperature", with_test = TRUE) # Name of the module
 
 ## Add helper functions ----
@@ -41,7 +40,7 @@ golem::add_sass_file("www/custom")
 
 ## Add internal datasets ----
 ## If you have data in your package
-usethis::use_data_raw(name = "tas_timeseries_annual_cru_1901_2020_IND", open = FALSE)
+usethis::use_data_raw(name = "timeseries.csv", open = FALSE)
 
 ## Tests ----
 ## Add one line by test you want to create
@@ -50,7 +49,7 @@ usethis::use_test("app")
 # Documentation
 
 ## Vignette ----
-usethis::use_vignette("Rshiny")
+usethis::use_vignette("Rgitsimran")
 devtools::build_vignettes()
 
 ## Code Coverage----
@@ -65,7 +64,7 @@ covrpage::covrpage()
 ## service for your application
 ##
 ## (You'll need GitHub there)
-usethis::use_github(rshiny/rgit)
+usethis::use_github()
 
 # GitHub Actions
 usethis::use_github_action()
